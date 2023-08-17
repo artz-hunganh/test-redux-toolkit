@@ -29,11 +29,11 @@ const middleWares = [process.env.NODE_ENV === "development" && logger].filter(
 export const store = configureStore({
   reducer: rootReducer,
   // Redux toolkit includes 3 middlewares by default: redux-thunk,
-  middleware: (getDefaultMiddleware) => {
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
-    }).concat(middleWares);
-  }, // This line removes default middlewares then use our custom middlewares. Pass in []:array for multiple
+    }).concat(middleWares),
+  // This line removes default middlewares then use our custom middlewares. Pass in []:array for multiple
 });
 
 // createStore(persistedReducer, undefined, composedEnhancers);

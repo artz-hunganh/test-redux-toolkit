@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-
 import { Routes, Route } from "react-router-dom";
 
 import {
@@ -23,7 +22,7 @@ const App = () => {
         createUserDocumentFromAuth(user);
       }
       const pickedUser =
-        user && (({ accessToken, email }) => ({ accessToken, email }(user)));
+        user && (({ accessToken, email }) => ({ accessToken, email }))(user);
       dispatch(setCurrentUser(pickedUser));
     });
 

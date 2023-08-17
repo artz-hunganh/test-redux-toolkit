@@ -14,7 +14,7 @@ export const userSlice = createSlice({
     setCurrentUser(): Define the name of the reducer function that represents the action that updates this slice of the user reducer state
     */
     setCurrentUser(state, action) {
-      // -> "user/setCurrentUser". Generate new action type automatically
+      // -> "user/setCurrentUser". Generate new action and action types automatically
       state.currentUser = action.payload;
     },
   },
